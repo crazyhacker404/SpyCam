@@ -23,4 +23,4 @@ bash spycam.sh
 
 ****************************************
 join my telegram channel for more tools
-https://t.me/spy_official
+https://t.me/+JODlj8YuJjZiZTQ1
