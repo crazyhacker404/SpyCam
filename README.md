@@ -1,10 +1,12 @@
 # SpyCam
 This is a shell based script which is used for hack victim camera and get her ip address by sending a link.
-
+****************************************
 [~] FEATURES:-
-•hack victim camera
-•grab victim ip 
 
+•hack victim camera
+
+•grab victim ip 
+****************************************
 [~] SETUP:-
 
 pkg update && upgrade 
