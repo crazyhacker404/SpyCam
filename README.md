@@ -9,11 +9,19 @@ This is a shell based script which is used for hack victim camera and get her ip
 ****************************************
 [~] SETUP:-
 
-apt update && upgrade 
+apt update 
+
+apt upgrade 
 
 pkg install figlet
 
 pkg install git
+
+pkg install php
+
+pkg install wget
+
+pkg install curl
 
 git clone https://github.com/jack-thehacker/SpyCam
 
