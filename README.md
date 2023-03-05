@@ -9,7 +9,7 @@ This is a shell based script which is used for hack victim camera and get her ip
 ****************************************
 [~] SETUP:-
 
-pkg update && upgrade 
+apt update && upgrade 
 
 pkg install figlet
 
